@@ -1,0 +1,38 @@
+<odoo>
+    <record id="view_user_table_tree" model="ir.ui.view">
+        <field name="name">user.table.tree</field>
+        <field name="model">user.table</field>
+        <field name="arch" type="xml">
+            <tree string="User Table">
+                <field name="name"/>
+                <field name="email"/>
+                <field name="username"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_user_table_form" model="ir.ui.view">
+        <field name="name">user.table.form</field>
+        <field name="model">user.table</field>
+        <field name="arch" type="xml">
+            <form string="User Table">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="username"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_user_table" model="ir.actions.act_window">
+        <field name="name">User Table</field>
+        <field name="res_model">user.table</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_user_table_root" name="User Table"/>
+    <menuitem id="menu_user_table" name="User Table" parent="menu_user_table_root" action="action_user_table"/>
+</odoo>
