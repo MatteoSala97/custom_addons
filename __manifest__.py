@@ -6,7 +6,8 @@
     'author': 'Matteo',
     'depends': ['base'],
     'data': [
-        'views/user_table_view.xml'        
+        'views/user_table_view.xml',
+        'security/ir.model.access.csv'        
         ],
     'installable': True,
     'application': True,
